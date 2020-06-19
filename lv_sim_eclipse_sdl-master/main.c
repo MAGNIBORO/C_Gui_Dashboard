@@ -57,8 +57,8 @@ int main(int argc, char **argv)
   /*Initialize the HAL (display, input devices, tick) for LVGL*/
   hal_init();
 
-  lv_demo_widgets();
-//  lv_demo_printer();
+//  lv_demo_widgets();
+  lv_demo_printer();
 
   while (1) {
     /* Periodically call the lv_task handler.
@@ -150,4 +150,5 @@ static void memory_monitor(lv_task_t *param) {
   printf("used: %6d (%3d %%), frag: %3d %%, biggest free: %6d\n",
          (int)mon.total_size - mon.free_size, mon.used_pct, mon.frag_pct,
          (int)mon.free_biggest_size);
+
 }
